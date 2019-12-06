@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Build Proxy to Spec') {
             agent {
-                docker { image 'node:12-alpine' }
+                docker { image 'node' }
             }
             steps {
                 sh 'node --version'
