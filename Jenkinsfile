@@ -15,7 +15,6 @@ pipeline {
             }
             steps {
                 sh 'node --version'
-                sh 'chown -R 988:982 "/.npm"'
                 sh 'npm install openapi2apigee'
                 sh 'openapi2apigee generateApi proxy-test -s swagger.yaml -d /'
             }
