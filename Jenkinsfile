@@ -15,7 +15,7 @@ pipeline {
             }
             steps {
                 sh 'node --version'
-                sh 'npm install openapi2apigee'
+                sh 'npm install -g openapi2apigee'
                 sh 'openapi2apigee generateApi proxy-test -s swagger.yaml -d /'
             }
         }
