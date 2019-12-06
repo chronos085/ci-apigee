@@ -9,10 +9,11 @@ pipeline {
                 sh 'mvn --version'
             }
         }
-        stage('Front-end') {
+        stage('Build Proxy to Spec') {
             agent { dockerfile true }
             steps {
                 sh 'node --version'
+                sh "openapi2apigee generateApi proxy-test -s swagger.yaml -d /opt"
             }
         }
     }
