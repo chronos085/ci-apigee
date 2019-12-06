@@ -13,6 +13,7 @@ pipeline {
             agent { dockerfile true }
             steps {
                 sh 'node --version'
+                sh 'ls'
                 sh 'mkdir /petStore'
                 sh 'openapi2apigee generateApi petStore -s http://petstore.swagger.io/v2/swagger.json -d /'
             }
