@@ -16,6 +16,7 @@ pipeline {
             steps {
                 sh 'node --version'
                 sh 'openapi2apigee generateApi petStore -s http://petstore.swagger.io/v2/swagger.json -d /apigee'
+                sh "apigeelint -s /apigee/petStore/apiproxy -f table.js"
             }
         }
     }
