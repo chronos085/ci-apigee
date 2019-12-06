@@ -1,4 +1,4 @@
-FROM node:7-alpine
+FROM node:8-alpine
 
 RUN npm install -g openapi2apigee
 RUN npm install -g apigeelint
