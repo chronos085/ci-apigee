@@ -10,11 +10,13 @@ pipeline {
             }
         }
         stage('Build Proxy to Spec') {
-            agent { dockerfile true }
+            agent {
+                docker { image 'node:12-alpine' }
+            }
             steps {
                 sh 'node --version'
-                sh 'ls'
-                sh 'openapi2apigee generateApi proxy-test -s swagger.yaml -d /opt'
+                sh 'npm install -g openapi2apigee'
+                sh 'openapi2apigee generateApi proxy-test -s swagger.yaml -d /'
             }
         }
     }
