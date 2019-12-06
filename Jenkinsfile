@@ -13,6 +13,7 @@ pipeline {
             agent { dockerfile true }
             steps {
                 sh 'node --version'
+                sh 'ls'
                 sh "openapi2apigee generateApi proxy-test -s swagger.yaml -d /opt"
             }
         }
