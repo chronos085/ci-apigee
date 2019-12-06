@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh 'node --version'
                 sh 'ls'
-                sh "openapi2apigee generateApi proxy-test -s swagger.yaml -d /opt"
+                sh 'openapi2apigee generateApi proxy-test -s swagger.yaml -d /opt'
             }
         }
     }
