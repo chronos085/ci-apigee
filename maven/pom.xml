@@ -9,8 +9,8 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>apigee</groupId>
-    <artifactId>ConfigOnly</artifactId>
+    <artifactId>apiproxy</artifactId>
     <version>1.0</version>
-    <name>ConfigOnly</name>
+    <name>apiproxy</name>
     <packaging>pom</packaging>
 </project>
