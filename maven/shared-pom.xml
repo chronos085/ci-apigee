@@ -85,9 +85,9 @@
     </build>
     <profiles>
         <profile>
-            <id>integration</id>
+            <id>build</id>
             <properties>
-		<apigee.profile>integration</apigee.profile>
+		<apigee.profile>build</apigee.profile>
                 <apigee.env>${env}</apigee.env>
                 <apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
                 <apigee.apiversion>v1</apigee.apiversion>
